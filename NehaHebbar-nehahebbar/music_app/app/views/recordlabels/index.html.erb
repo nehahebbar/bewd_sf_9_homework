@@ -1,0 +1,33 @@
+
+<div class="col-md-12">
+  <div class="table-responsive">
+    <h1 style="color:#7C76A6;"><b>All Record Labels</b> </h1>
+    <%=link_to "Add New Record Label", recordlabels_new_path, class: 'btn btn-purple btn-sm' %>
+    <br>
+    <br>
+    <table class="table table-hover">
+
+      <!-- This is a table row with headers -->
+      <tr class="small">
+        <th> Record Label Name</th>
+        <th> Owner </th>
+        <th> Description </th>
+        <th> Actions </th
+      </tr>
+
+        <% @recordlabels.each do |recordlabel| %>
+        <tr class="small">
+          <td> <%= recordlabel.name %></td>
+          <td> <%= recordlabel.owner %></td>
+          <td> <%= recordlabel.description %></td>
+
+          <td>
+            <%=link_to 'Show', recordlabel_path(recordlabel), class: "btn btn-purple btn-xs" %>
+            <%= link_to "Edit", edit_recordlabel_path(recordlabel), class: "btn btn-purple btn-xs"%>
+            <%= link_to "Delete", recordlabel, method: :delete, data: {confirm: "You sure?"}, class: 'btn btn-xs btn-danger' %>
+          </td>
+       </tr>
+        <% end %>
+    </table>
+  </div>
+</div>

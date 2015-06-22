@@ -1,0 +1,27 @@
+
+<div class="col-md-12">
+  <div class="table-responsive">
+    <h1 style="color:#7C76A6;"><b>All Songs</b> </h1>
+    <br>
+    <table class="table table-hover">
+
+      <!-- This is a table row with headers -->
+      <tr class="small">
+        <th> Song Title</th>
+        <th> Artist </th>
+        <th> Actions </th>
+      </tr>
+
+      <% @songs.each do |song| %>
+        <tr class="small">
+          <td> <%= "#{song.title.titleize}" %></td>
+          <td> <%= artist_name %> </td>
+          <td>
+            <%= link_to "Edit", edit_song_path(song), class: "btn btn-purple btn-xs"%>
+            <%= link_to "Delete", song, method: :delete, data: {confirm: "You sure?"}, class: 'btn btn-xs btn-danger' %>
+          </td>
+       </tr>
+        <% end %>
+    </table>
+  </div>
+</div>

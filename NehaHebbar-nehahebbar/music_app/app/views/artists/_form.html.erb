@@ -1,0 +1,5 @@
+<%= simple_form_for @artist do |f| %>
+  <%= f.input :name %>
+  <%= f.hidden_field :recordlabel_id , value: params[:recordlabel] %>
+  <%= f.button :submit %>
+<% end %>

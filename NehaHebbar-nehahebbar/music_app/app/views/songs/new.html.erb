@@ -1,0 +1,16 @@
+<h2 style="color:#7C76A6">New Song </h2>
+
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h1> <%= artist_name %>  </h1>
+  </div>
+
+  <div class="panel-body">
+    <%= simple_form_for @song do |f| %>
+    <%=f.input :title, label: false, placeholder: "Add Song Title"%>
+    <%=f.input :year, label: false, placeholder: "Add Year"%>
+    <%=f.hidden_field :artist_id , value: params[:artist] %>
+    <%=f.submit "Add".html_safe, class: 'btn btn-lg btn-purple' %>
+    <% end %>
+  </div>

@@ -1,0 +1,2 @@
+module RecordlabelsHelper
+end

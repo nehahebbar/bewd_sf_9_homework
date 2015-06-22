@@ -1,0 +1,25 @@
+
+<%=link_to "Add Song", new_song_path(artist:@artist), class: 'btn btn-purple btn-sm'%>
+
+<div class="panel-body">
+
+    <table class="table table-hover">
+
+      <!-- This is a table row with headers -->
+      <tr class="small">
+        <th> Song Title</th>
+        <th> Actions </th>
+      </tr>
+
+      <% @songs.each do |song| %>
+        <tr class="small">
+          <td> <%= "#{song.title.titleize}" %></td>
+          <td>
+            <%= link_to "Edit", edit_song_path(song), class: "btn btn-purple btn-xs"%>
+            <%= link_to "Delete", song, method: :delete, data: {confirm: "You sure?"}, class: 'btn btn-xs btn-danger' %>
+          </td>
+       </tr>
+        <% end %>
+    </table>
+  </div>
+</div>

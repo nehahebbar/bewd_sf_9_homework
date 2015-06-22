@@ -1,0 +1,8 @@
+<div class="col-md-12">
+<h1 style="color:#7C76A6;"><b> <%= "Songs by #{@artist.name.titleize}" %> </b>
+  <%=link_to "All Artists", artists_path, class: 'btn btn-purple btn-xs'%>
+</h1>
+
+      <%= render 'songs' %>
+
+</div>

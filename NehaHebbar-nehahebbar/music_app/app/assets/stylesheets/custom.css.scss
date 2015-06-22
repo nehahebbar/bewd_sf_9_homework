@@ -1,0 +1,11 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.navbar-nav li a {
+ line-height: 32px;
+}
+
+.btn-purple {
+    @include button-variant(#FFFFFF, #7C76A6, #34495E);
+}

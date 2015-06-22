@@ -1,0 +1,8 @@
+<div class="col-md-12">
+<h1 style="color:#7C76A6;"><b> <%= "Artists in #{@recordlabel.name.titleize}" %> </b>
+  <%=link_to "All Record Labels", recordlabels_path, class: 'btn btn-purple btn-xs'%>
+</h1>
+
+      <%= render 'artists' %>
+
+</div>
